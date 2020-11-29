@@ -34,7 +34,7 @@ xterm -T BANYUWANGI -e linux ubd0=BANYUWANGI,jarkom umid=BANYUWANGI eth0=daemon,
 xterm -T MADIUN -e linux ubd0=MADIUN,jarkom umid=MADIUN eth0=daemon,,,switch3 mem=64M &
 ```
 
-Langkah selanjutnya bisa dilihat pada Modul Pengenalan UML. Sedangkan untuk setting IP di ```/etc/network/interfaces``` setiap UML adalah sebagai berikut.
+Langkah selanjutnya bisa dilihat pada [Modul Pengenalan UML](https://github.com/arsitektur-jaringan-komputer/Modul-Jarkom/tree/modul-uml). Sedangkan untuk setting IP di ```/etc/network/interfaces``` setiap UML adalah sebagai berikut.
 
 **SURABAYA (Router)**
 
