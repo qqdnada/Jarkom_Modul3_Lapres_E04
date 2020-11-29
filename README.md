@@ -37,27 +37,28 @@ xterm -T MADIUN -e linux ubd0=MADIUN,jarkom umid=MADIUN eth0=daemon,,,switch3 me
 Langkah selanjutnya bisa dilihat pada Modul Pengenalan UML. Sedangkan untuk setting IP di ```/etc/network/interfaces``` setiap UML adalah sebagai berikut.
 
 **SURABAYA (Router)**
-![SURABAYA]()
+![SURABAYA](https://github.com/qqdnada/Jarkom_Modul3_Lapres_E04/blob/main/images/SURABAYA.JPG)
 
 
 **MALANG (DNS Server)**
-![MALANG]()
+![MALANG](https://github.com/qqdnada/Jarkom_Modul3_Lapres_E04/blob/main/images/MALANG.JPG)
 
 
 **TUBAN (DHCP Server)**
-![TUBAN]()
+![TUBAN](https://github.com/qqdnada/Jarkom_Modul3_Lapres_E04/blob/main/images/TUBAN.JPG)
 
 
 **MOJOKERTO (Proxy Server)**
-![MOJOKERTO]()
+![MOJOKERTO](https://github.com/qqdnada/Jarkom_Modul3_Lapres_E04/blob/main/images/MOJOKERTO.JPG)
 
 Karena seluruh klien **TIDAK DIPERBOLEHKAN** menggunakan konfigurasi IP Statis maka, pada ```/etc/network/interfaces``` klien, setting IP-nya seperti di bawah ini.
 
 **GRESIK SIDOARJO BANYUWANGI MADIUN (Klien)**
-![KLIEN]()
+
+![KLIEN](https://github.com/qqdnada/Jarkom_Modul3_Lapres_E04/blob/main/images/KLIEN.JPG)
 
 
-#### NOTE!
+### NOTE!
 Karena kelompok kami masih belum bisa untuk setup DHCP Server pada TUBAN (dengan relay pada SURABAYA), maka kami setup DHCP pada SURABAYA (tanpa DHCP Relay). Untuk itu, kami menginstall **isc-dhcp-server** pada router SURABAYA, **bind9** pada server MALANG, dan **squid3** pada server MOJOKERTO.
 
 
@@ -65,4 +66,4 @@ Karena kelompok kami masih belum bisa untuk setup DHCP Server pada TUBAN (dengan
 **(3)** Client pada subnet 1 mendapatkan range IP dari 192.168.0.10 sampai 192.168.0.100 dan 192.168.0.110 sampai 192.168.0.200. **(4)** Client pada subnet 3 mendapatkan range IP dari 192.168.1.50 sampai 192.168.1.70. **(5)** Client mendapatkan DNS Malang dan DNS 202.46.129.2 dari DHCP. **(6)** Client di subnet 1 mendapatkan peminjaman alamat IP selama 5 menit, sedangkan client pada subnet 3 mendapatkan peminjaman IP selama 10 menit.
 
 Pada SURABAYA tambahkan script berikut ini di ```/etc/dhcp/dhcpd.conf```.
-![SURABAYA-DHCP]()
+![SURABAYA-DHCP](https://github.com/qqdnada/Jarkom_Modul3_Lapres_E04/blob/main/images/SURABAYA-DHCP.JPG)
